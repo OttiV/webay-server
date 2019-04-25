@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./AdsList.css"
 
 export default class AdsList extends Component {
   renderAd(ad) {
@@ -16,7 +17,7 @@ export default class AdsList extends Component {
     const { ads } = this.props;
 
     return (
-      <div className="ads">
+      <div className="AdsList">
         <h1>WeBay</h1>
 
         {!ads && "Loading..."}

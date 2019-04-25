@@ -5,6 +5,7 @@ import { Route } from "react-router-dom";
 import AdsListContainer from "./components/AdsListContainer";
 import AdDetailsContainer from "./components/AdDetailsContainer";
 // import AdFormContainer from "./components/AdFormContainer";
+import "./App.css"
 
 class App extends Component {
   render() {

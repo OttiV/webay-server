@@ -34,7 +34,7 @@ export const loadAd = id => dispatch => {
   request
     .get(`${baseUrl}/ads/${id}`)
     .then(response => {
-      dispatch(adFetched(response.body.ads[2]));
+      dispatch(adFetched(response.body.ads));
     })
     .catch(console.error);
 };
