@@ -1,8 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import AdDetails from "./AdDetails";
-import { loadAd } from "../actions/ads";
-// import AdForm from "./AdForm";
+import { loadAd, updateAd } from "../actions/ads";
 
 class AdDetailsContainer extends React.Component {
   componentDidMount() {
@@ -74,5 +73,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { loadAd }
+  { loadAd, updateAd }
 )(AdDetailsContainer);

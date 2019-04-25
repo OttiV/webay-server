@@ -1,4 +1,4 @@
-import { AD_FETCHED } from "../actions/ads";
+import { AD_FETCHED, AD_UPDATE_SUCCESS } from "../actions/ads";
 
 export default (state = [], action = []) => {
   console.log("ACTION:", action.ad);
@@ -6,12 +6,12 @@ export default (state = [], action = []) => {
     case AD_FETCHED:
       return action.ad;
 
-    // case EVENT_UPDATE_SUCCESS:
-    //   if (state.id === action.event.id) {
-    //     return action.event;
-    //   }
+    case AD_UPDATE_SUCCESS:
+      if (state.id === action.ad.id) {
+        return action.ad;
+      }
 
-    //   return state;
+      return state;
 
     default:
       return state;

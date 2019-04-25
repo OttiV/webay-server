@@ -4,7 +4,7 @@ export const ADS_FETCHED = "ADS_FETCHED";
 // export const AD_CREATE_SUCCESS = "AD_CREATE_SUCCESS";
 export const AD_FETCHED = "AD_FETCHED";
 // export const AD_DELETE_SUCCESS = "AD_DELETE_SUCCESS";
-// export const AD_UPDATE_SUCCESS = "AD_UPDATE_SUCCESS";
+export const AD_UPDATE_SUCCESS = "AD_UPDATE_SUCCESS";
 
 const baseUrl = "http://localhost:4000";
 
@@ -35,6 +35,23 @@ export const loadAd = id => dispatch => {
     .then(response => {
       console.log("RESPONSE:", response);
       dispatch(adFetched(response.body.ads[0]));
+    })
+    .catch(console.error);
+};
+export const adUpdateSuccess = (ad) => ({
+  type: AD_UPDATE_SUCCESS,
+  ad,
+});
+
+export const updateAd = (id, formValues) => dispatch => {
+  const newAd = formValues
+  newAd.id = id
+
+  request
+    .put(`${baseUrl}/ads/${id}`)
+    .send(newAd) //to send the data to the DB
+    .then(() => {
+      dispatch(adUpdateSuccess(newAd));
     })
     .catch(console.error);
 };
