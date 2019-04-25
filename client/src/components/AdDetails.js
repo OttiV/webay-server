@@ -9,7 +9,7 @@ export default function AdDetails(props) {
       <p>$ {props.ad.price} </p>
       <p>{props.ad.email} </p>
       <p>{props.ad.phone} </p>
-      <img src={props.ad.picture} alt="bottle"/>
+      <img src={props.ad.picture} alt={props.ad.description} />
     </div>
   );
 }
