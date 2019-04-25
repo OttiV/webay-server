@@ -19,6 +19,7 @@ export const loadAds = () => (dispatch, getState) => {
 
   request(`${baseUrl}/ads`)
     .then(response => {
+      console.log("RESPONSE:", response);
       dispatch(adsFetched(response.body.ads));
     })
     .catch(console.error);
@@ -33,8 +34,7 @@ export const loadAd = id => dispatch => {
   request
     .get(`${baseUrl}/ads/${id}`)
     .then(response => {
-      console.log("RESPONSE:", response);
-      dispatch(adFetched(response.body.ads[0]));
+      dispatch(adFetched(response.body.ads[2]));
     })
     .catch(console.error);
 };

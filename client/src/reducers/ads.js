@@ -1,26 +1,25 @@
+import {
+  ADS_FETCHED,
+  AD_UPDATE_SUCCESS
+} from "../actions/ads";
+
 export default (state = null, action = []) => {
-  
+  console.log("ACTIONS:", action);
   switch (action.type) {
-    case "ADS_FETCHED":
+    case ADS_FETCHED:
       return action.ads;
 
-    // case "EVENT_CREATE_SUCCESS":
-    //   return [...state, action.event];
+    case AD_UPDATE_SUCCESS:
+      const newState = state.map(ad => {
+        if (ad.id === action.ad.id) {
+          return action.ad;
+        }
 
-    // case "EVENT_DELETE_SUCCESS":
-    //   const array = state.filter(event => {
-    //     return event.id !== action.payload;
-    //   });
-    //   return array;
+        return ad;
+      });
 
-    // case "EVENT_EDIT":
-    //   const array1 = state.map(event => {
-    //     if (event.id === action.id) {
-    //       return action.payload;
-    //     } else return event;
-    //   });
-    //   console.log(array1);
-    //   return array1;
+      console.log("newState test:", newState);
+      return newState;
 
     default:
       return state;

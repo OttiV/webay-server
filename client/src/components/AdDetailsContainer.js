@@ -9,10 +9,10 @@ class AdDetailsContainer extends React.Component {
     this.props.loadAd(this.props.ad);
   }
 
-  onDelete = () => {
-    this.props.deleteAd(this.props.ad.id);
-    this.props.history.push("/");
-  };
+//   onDelete = () => {
+//     this.props.deleteAd(this.props.ad.id);
+//     this.props.history.push("/");
+//   };
   state = { editMode: false };
 
   onEdit = () => {

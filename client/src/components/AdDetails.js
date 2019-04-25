@@ -26,11 +26,11 @@ export default function AdDetails(props) {
             onChange={props.onChange}
             onSubmit={props.onSubmit}
           />
-          <Link to="/">
-            <button className="AdDetailsButtons">Events</button>
-          </Link>
         </div>
       )}
+          <Link to="/">
+            <button className="AdDetailsButtons">Home</button>
+          </Link>
     </div>
   );
 }
