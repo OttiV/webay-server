@@ -1,4 +1,5 @@
 import React from "react";
+import AdForm from "./AdForm";
 
 export default function AdDetails(props) {
   console.log("PROPSSSS", props.ad.id);
@@ -10,6 +11,11 @@ export default function AdDetails(props) {
       <p>{props.ad.email} </p>
       <p>{props.ad.phone} </p>
       <img src={props.ad.picture} alt={props.ad.description} />
+      <AdForm
+        values={props.formValues}
+        onChange={props.onChange}
+        onSubmit={props.onSubmit}
+      />
     </div>
   );
 }
