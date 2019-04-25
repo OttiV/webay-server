@@ -14,11 +14,13 @@ const adsFetched = ads => ({
 });
 
 export const loadAds = () => (dispatch, getState) => {
+  console.log("test");
   if (getState().ads) return;
 
   request(`${baseUrl}/ads`)
     .then(response => {
-      dispatch(adsFetched(response.body));
+      console.log("RESPONSE:", response);
+      dispatch(adsFetched(response.body.ads));
     })
     .catch(console.error);
 };

@@ -1,4 +1,5 @@
 export default (state = null, action = []) => {
+  console.log("ACTION:", action)
   switch (action.type) {
     case "ADS_FETCHED":
       return action.ads;

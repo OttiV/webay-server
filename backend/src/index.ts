@@ -1,12 +1,13 @@
 import AdController from "./ads/controller";
 import setupDb from "./db";
-const express = require("express");
-const bodyParser = require("body-parser");
+import { createExpressServer } from "routing-controllers";
 
-const app = express();
 const port = process.env.PORT || 4000;
 
-app.use(bodyParser.json()).use(AdController);
+const app = createExpressServer({
+  cors: true,
+  controllers: [AdController]
+});
 
 setupDb()
   .then(_ => app.listen(port, () => console.log(`Listening on port ${port}`)))

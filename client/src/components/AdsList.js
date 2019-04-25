@@ -1,25 +1,25 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-export default class EventsList extends Component {
-  renderEvent(event) {
+export default class AdsList extends Component {
+  renderAd(ad) {
     return (
-      <li key={event.id}>
-        <Link to={`/events/${encodeURIComponent(event.id)}`}>{event.name}</Link>
+      <li key={ad.id}>
+        <Link to={`/ads/${encodeURIComponent(ad.id)}`}>{ad.title}</Link>
       </li>
     );
   }
 
   render() {
-    const { events } = this.props;
+    const { ads } = this.props;
 
     return (
-      <div className="events">
-        <h1>Events List</h1>
+      <div className="ads">
+        <h1>WeBay</h1>
 
-        {!events && "Loading..."}
+        {!ads && "Loading..."}
 
-        {events && <ul>{events.map(this.renderEvent)}</ul>}
+        {ads && <ul>{ads.map(this.renderAd)}</ul>}
       </div>
     );
   }
