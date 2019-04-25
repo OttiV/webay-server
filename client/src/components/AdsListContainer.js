@@ -6,7 +6,7 @@ import AdsList from "./AdsList";
 
 class AdsListContainer extends React.Component {
   componentDidMount() {
-    this.props.loadAds();
+    this.props.loadAds(this.props.ads);
   }
 
   render() {

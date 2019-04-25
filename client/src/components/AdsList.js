@@ -5,7 +5,9 @@ export default class AdsList extends Component {
   renderAd(ad) {
     return (
       <li key={ad.id}>
-        <Link to={`/ads/${encodeURIComponent(ad.id)}`}>{ad.title}</Link>
+        <Link to={`/ads/${encodeURIComponent(ad.id)}`}>
+          {ad.title}, $ {ad.price}
+        </Link>
       </li>
     );
   }
