@@ -3,7 +3,7 @@ import AdForm from "./AdForm";
 import { Link } from "react-router-dom";
 
 export default function AdDetails(props) {
-  console.log("PROPSSSS", props.ad.id);
+  console.log("PROPSSSS", props.ad);
   return (
     <div className="EventDetailsContainer">
       {props.ad && !props.editMode && (
@@ -28,9 +28,9 @@ export default function AdDetails(props) {
           />
         </div>
       )}
-          <Link to="/">
-            <button className="AdDetailsButtons">Home</button>
-          </Link>
+      <Link to="/">
+        <button className="AdDetailsButtons">Home</button>
+      </Link>
     </div>
   );
 }

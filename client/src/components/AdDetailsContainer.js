@@ -5,14 +5,14 @@ import { loadAd, updateAd } from "../actions/ads";
 
 class AdDetailsContainer extends React.Component {
   componentDidMount() {
-    console.log(this.props.ad);
-    this.props.loadAd(this.props.ad);
+    console.log(this.props.match.params.id);
+    this.props.loadAd(this.props.match.params.id);
   }
 
-//   onDelete = () => {
-//     this.props.deleteAd(this.props.ad.id);
-//     this.props.history.push("/");
-//   };
+  //   onDelete = () => {
+  //     this.props.deleteAd(this.props.ad.id);
+  //     this.props.history.push("/");
+  //   };
   state = { editMode: false };
 
   onEdit = () => {

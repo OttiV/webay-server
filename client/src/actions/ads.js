@@ -34,18 +34,19 @@ export const loadAd = id => dispatch => {
   request
     .get(`${baseUrl}/ads/${id}`)
     .then(response => {
-      dispatch(adFetched(response.body.ads));
+      console.log(response.body);
+      dispatch(adFetched(response.body));
     })
     .catch(console.error);
 };
-export const adUpdateSuccess = (ad) => ({
+export const adUpdateSuccess = ad => ({
   type: AD_UPDATE_SUCCESS,
-  ad,
+  ad
 });
 
 export const updateAd = (id, formValues) => dispatch => {
-  const newAd = formValues
-  newAd.id = id
+  const newAd = formValues;
+  newAd.id = id;
 
   request
     .put(`${baseUrl}/ads/${id}`)
