@@ -1,4 +1,5 @@
 import React from "react";
+import "./AdForm.css";
 
 export default class AdForm extends React.Component {
   render() {
@@ -17,11 +18,11 @@ export default class AdForm extends React.Component {
           Description:
         </label>
         <br />
-        <textarea
+        <input
           name="description"
           value={this.props.description}
           onChange={this.props.onChange}
-          className={"EventForm__textarea"}
+          className={"AdForm_textarea"}
         />
         <br />
         <label htmlFor="price">Price:</label>

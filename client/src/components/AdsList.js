@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./AdsList.css"
+import "./AdsList.css";
 
 export default class AdsList extends Component {
   renderAd(ad) {
     return (
-      <li key={ad.id}>
+      <li className="Ads" key={ad.id}>
         <Link to={`/ads/${encodeURIComponent(ad.id)}`}>
-        {ad.title}, <i>$ {ad.price}</i> <br/><img src={ad.picture} alt={ad.description}/> 
+          {ad.title}, <i>$ {ad.price}</i> <br />
+          <img className="images" src={ad.picture} alt={ad.description} />
         </Link>
       </li>
     );
@@ -18,7 +19,7 @@ export default class AdsList extends Component {
 
     return (
       <div className="AdsList">
-        <h1>WeBay</h1>
+        <h1 className="WeBay">WeBay</h1>
 
         {!ads && "Loading..."}
 
