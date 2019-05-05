@@ -55,7 +55,7 @@ export default class AdForm extends React.Component {
         <label htmlFor="picture">Picture url:</label>
         <br />
         <input
-          name="phone"
+          name="picture"
           value={this.props.picture}
           onChange={this.props.onChange}
           className={"AdForm_input"}

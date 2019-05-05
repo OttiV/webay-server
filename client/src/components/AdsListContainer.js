@@ -13,7 +13,7 @@ class AdsListContainer extends React.Component {
     return (
       <>
         {Array.isArray(this.props.ads) && <AdsList ads={this.props.ads} />}
-        {/* <CreateAdsFormContainer /> */}
+        {console.log(this.props)}
       </>
     );
   }

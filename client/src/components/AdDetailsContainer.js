@@ -5,7 +5,6 @@ import { loadAd, updateAd } from "../actions/ads";
 
 class AdDetailsContainer extends React.Component {
   componentDidMount() {
-    console.log(this.props.match.params.id);
     this.props.loadAd(this.props.match.params.id);
   }
 
@@ -48,6 +47,7 @@ class AdDetailsContainer extends React.Component {
       editMode: false
     });
     console.log("this.state test", this.state);
+    console.log("HIERRRRR", this.props);
     this.props.updateAd(this.props.ad.id, this.state.formValues);
   };
   render() {

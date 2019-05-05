@@ -15,7 +15,7 @@ const adsFetched = ads => ({
 
 export const loadAds = () => (dispatch, getState) => {
   console.log("test");
-  if (getState().ads) return;
+  // if (getState().ads) return;
 
   request(`${baseUrl}/ads`)
     .then(response => {
@@ -45,6 +45,7 @@ export const adUpdateSuccess = ad => ({
 });
 
 export const updateAd = (id, formValues) => dispatch => {
+  console.log(id, formValues);
   const newAd = formValues;
   newAd.id = id;
 
