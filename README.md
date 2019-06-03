@@ -1,6 +1,6 @@
 # ebay-clone
 
-This repo contains a frontend and backend for a multiplayer word find game. It uses Typescript, Express, routing-controllers and TypeORM in the backend and React/Redux in the frontend.
+This repo contains a frontend and backend. It uses Typescript, Express, routing-controllers and TypeORM in the backend and React/Redux in the frontend.
 
 
 ## Getting Started
