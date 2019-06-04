@@ -1,4 +1,4 @@
-# Webay-clone
+# Webay
 ## [Check out the deployed version](https://webay.netlify.com/)
 This repo contains a frontend and backend. It uses Typescript, Express, routing-controllers and TypeORM in the backend and React/Redux in the frontend.
 
