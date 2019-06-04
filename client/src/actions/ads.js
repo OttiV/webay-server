@@ -6,7 +6,7 @@ export const AD_FETCHED = "AD_FETCHED";
 // export const AD_DELETE_SUCCESS = "AD_DELETE_SUCCESS";
 export const AD_UPDATE_SUCCESS = "AD_UPDATE_SUCCESS";
 
-const baseUrl = "https://still-beyond-89734.herokuapp.com/";
+const baseUrl = "https://still-beyond-89734.herokuapp.com";
 
 const adsFetched = ads => ({
   type: ADS_FETCHED,
