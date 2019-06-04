@@ -5,7 +5,7 @@ import { Route } from "react-router-dom";
 import AdsListContainer from "./components/AdsListContainer";
 import AdDetailsContainer from "./components/AdDetailsContainer";
 // import AdFormContainer from "./components/AdFormContainer";
-import "./App.css"
+import "./App.css";
 
 class App extends Component {
   render() {
@@ -14,7 +14,7 @@ class App extends Component {
         <div>
           <Route path="/" exact component={AdsListContainer} />
           <Route path="/ads/:id" component={AdDetailsContainer} />
-          {/* <Route path="/login" component={AdFormContainer} />  */}
+          {/* <Route path="/login" component={AdFormContainer} /> */}
         </div>
       </Provider>
     );
