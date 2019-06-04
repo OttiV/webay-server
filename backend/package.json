@@ -21,11 +21,11 @@
     "typescript": "^3.4.5"
   },
   "scripts": {
-    "start": "node .",
-    "postinstall": "tsc -p",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "nodemon .",
+    "dev": "node .",
+    "test": "node_modules/.bin/mocha --require ts-node/register src/**/*.spec.ts",
+    "watch": "node_modules/.bin/tsc -w",
+    "compile": "node_modules/.bin/tsc -p ."
   },
   "eslintConfig": {
     "extends": "react-app"

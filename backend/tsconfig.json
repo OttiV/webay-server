@@ -13,10 +13,13 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "target": "es2017",
-    "outDir": "./target/",
-    "rootDir": "./src/"
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types"],
+    "outDir": "target/",
+    "rootDir": "src/"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"],
+  "typeRoots": ["@typesCustom", "node_modules/@types"],
   "compileOnSave": true
 }
