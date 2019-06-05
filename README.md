@@ -1,6 +1,6 @@
 # Webay
 ## [Check out the deployed version](https://webay.netlify.com/)
-This repo contains a frontend and backend. It uses Typescript, Express, routing-controllers and TypeORM
+This repo contains a backend and uses Typescript, Express, routing-controllers and TypeORM
 
 
 ## Getting Started
