@@ -19,6 +19,6 @@ $ docker run \
 
 ### TypeStack Server
 
-Then `cd` into the `server` directory and run `npm install` to install the dependencies.
+Then run `npm install` to install the dependencies.
 
 Start the server with the `nodemon`
