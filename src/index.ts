@@ -1,4 +1,6 @@
 import AdController from "./ads/controller";
+import UserController from "./users/controller";
+import LoginController from "./logins/controller";
 import setupDb from "./db";
 import { createExpressServer } from "routing-controllers";
 
@@ -6,7 +8,7 @@ const port = process.env.PORT || 4000;
 
 const app = createExpressServer({
   cors: true,
-  controllers: [AdController]
+  controllers: [AdController, UserController, LoginController]
 });
 
 setupDb()
