@@ -1,6 +1,6 @@
 import {
   JsonController,
-  Authorized,
+  // Authorized,
   Get,
   Param,
   Put,
@@ -24,7 +24,7 @@ export default class AdController {
     return { ads };
   }
 
-  @Authorized()
+  // @Authorized()
   @Put("/ads/:id")
   async updateAd(@Param("id") id: number, @Body() update: Partial<Ad>) {
     const ad = await Ad.findOne(id);
@@ -32,8 +32,8 @@ export default class AdController {
 
     return Ad.merge(ad, update).save();
   }
-  
-  @Authorized()
+
+  // @Authorized()
   @Post("/ads")
   @HttpCode(201)
   createAd(@Body() ad: Ad) {
