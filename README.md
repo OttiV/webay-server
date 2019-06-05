@@ -1,6 +1,6 @@
 # Webay
 ## [Check out the deployed version](https://webay.netlify.com/)
-This repo contains a frontend and backend. It uses Typescript, Express, routing-controllers and TypeORM in the backend and React/Redux in the frontend.
+This repo contains a frontend and backend. It uses Typescript, Express, routing-controllers and TypeORM
 
 
 ## Getting Started
@@ -22,7 +22,3 @@ $ docker run \
 Then `cd` into the `server` directory and run `npm install` to install the dependencies.
 
 Start the server with the `nodemon`
-
-### React Client
-
-Open another terminal session and `cd` into the `client` directory, then run `npm install` to install dependencies and run `npm start` to start the dev server.
