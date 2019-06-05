@@ -4,6 +4,7 @@
   "private": true,
   "main": "target/index.js",
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "body-parser": "^1.18.3",
     "class-validator": "^0.9.1",
     "cors": "^2.8.5",
