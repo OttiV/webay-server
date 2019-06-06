@@ -1,7 +1,8 @@
 # Webay
-## [Check out the deployed version](https://webay.netlify.com/)
-This repo contains a backend and uses Typescript, Express, routing-controllers and TypeORM
 
+## [Check out the deployed version](https://webay.netlify.com/)
+
+This repo contains a backend and uses Typescript, Express, routing-controllers and TypeORM
 
 ## Getting Started
 
@@ -21,4 +22,4 @@ $ docker run \
 
 Then run `npm install` to install the dependencies.
 
-Start the server with the `nodemon`
+Start the server with `npm start`

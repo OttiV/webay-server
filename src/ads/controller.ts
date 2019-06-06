@@ -19,9 +19,8 @@ export default class AdController {
   }
 
   @Get("/ads")
-  async allAds() {
-    const ads = await Ad.find();
-    return { ads };
+  allAds() {
+    return Ad.find();
   }
 
   // @Authorized()
@@ -40,4 +39,3 @@ export default class AdController {
     return ad.save();
   }
 }
-
